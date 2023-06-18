@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+
+
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Health<span class="text-danger">Genics</span></a>
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">Dashboard</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#fitness">Fitness</a></li>
+                            <li><a class="dropdown-item" href="#progress">Progress</a></li>
+                            <li><a class="dropdown-item" href="#features">Features</a></li>
+                            <li><a class="dropdown-item" href="#pricing">Pricing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">Notifications
+                            <span class="badge text-bg-light rounded-pill align-text-bottom">27</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                        height="30" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+                                        <path
+                                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                    </svg>
+                                    You have new order!
+
+
+                                    <span class="text-danger"> 30 minutes ago</span></a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                        height="30" viewBox="0 0 24 24">
+                                        <g>
+                                            <path fill="none" d="M0 0h24v24H0z" />
+                                            <path
+                                                d="M11.602 13.76l1.412 1.412 8.466-8.466 1.414 1.414-9.88 9.88-6.364-6.364 1.414-1.414 2.125 2.125 1.413 1.412zm.002-2.828l4.952-4.953 1.41 1.41-4.952 4.953-1.41-1.41zm-2.827 5.655L7.364 18 1 11.636l1.414-1.414 1.413 1.413-.001.001 4.951 4.951z" />
+                                        </g>
+                                    </svg>
+                                    Completed the task!
+
+                                    <span class="text-danger"> Last week</span></a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#"><svg width="30" height="30" viewBox="0 0 1024 1024"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="currentColor"
+                                            d="M288 320a224 224 0 1 0 448 0 224 224 0 1 0-448 0zm544 608H160a32 32 0 0 1-32-32v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 0 1-32 32z" />
+                                    </svg>
+                                    We've got a new member!
+
+                                    <span class="text-danger"> 20 minutes ago</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="25" zoomAndPan="magnify"
+                                viewBox="0 0 30 30.000001" height="25" preserveAspectRatio="xMidYMid meet"
+                                version="1.0">
+                                <defs>
+                                    <clipPath id="id1">
+                                        <path
+                                            d="M 2.511719 6.402344 L 27.191406 6.402344 L 27.191406 24.546875 L 2.511719 24.546875 Z M 2.511719 6.402344 "
+                                            clip-rule="nonzero" />
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#id1)">
+                                    <path fill="rgb(0%, 14.118958%, 49.01886%)"
+                                        d="M 2.519531 9.234375 L 2.519531 11.984375 L 6.375 11.984375 Z M 5.714844 24.546875 L 11.425781 24.546875 L 11.425781 20.472656 Z M 18.277344 20.472656 L 18.277344 24.546875 L 23.984375 24.546875 Z M 2.519531 18.964844 L 2.519531 21.714844 L 6.378906 18.964844 Z M 23.988281 6.402344 L 18.277344 6.402344 L 18.277344 10.472656 Z M 27.183594 21.714844 L 27.183594 18.964844 L 23.324219 18.964844 Z M 27.183594 11.984375 L 27.183594 9.234375 L 23.324219 11.984375 Z M 11.425781 6.402344 L 5.714844 6.402344 L 11.425781 10.472656 Z M 11.425781 6.402344 "
+                                        fill-opacity="1" fill-rule="nonzero" />
+                                    <path fill="rgb(81.17981%, 10.5896%, 16.859436%)"
+                                        d="M 19.742188 18.964844 L 26.394531 23.710938 C 26.71875 23.375 26.949219 22.953125 27.074219 22.488281 L 22.132812 18.964844 Z M 11.425781 18.964844 L 9.960938 18.964844 L 3.304688 23.707031 C 3.664062 24.078125 4.121094 24.34375 4.632812 24.464844 L 11.425781 19.621094 Z M 18.277344 11.984375 L 19.742188 11.984375 L 26.394531 7.238281 C 26.039062 6.867188 25.582031 6.605469 25.070312 6.480469 L 18.277344 11.324219 Z M 9.960938 11.984375 L 3.304688 7.238281 C 2.984375 7.574219 2.753906 7.992188 2.628906 8.460938 L 7.570312 11.984375 Z M 9.960938 11.984375 "
+                                        fill-opacity="1" fill-rule="nonzero" />
+                                    <path fill="rgb(93.328857%, 93.328857%, 93.328857%)"
+                                        d="M 27.183594 17.566406 L 16.90625 17.566406 L 16.90625 24.546875 L 18.277344 24.546875 L 18.277344 20.472656 L 23.984375 24.546875 L 24.441406 24.546875 C 25.207031 24.546875 25.898438 24.222656 26.394531 23.710938 L 19.742188 18.964844 L 22.132812 18.964844 L 27.074219 22.488281 C 27.136719 22.253906 27.183594 22.011719 27.183594 21.753906 L 27.183594 21.714844 L 23.324219 18.964844 L 27.183594 18.964844 Z M 2.519531 17.566406 L 2.519531 18.964844 L 6.378906 18.964844 L 2.519531 21.714844 L 2.519531 21.753906 C 2.519531 22.515625 2.820312 23.203125 3.304688 23.707031 L 9.960938 18.964844 L 11.425781 18.964844 L 11.425781 19.621094 L 4.632812 24.464844 C 4.835938 24.515625 5.042969 24.546875 5.261719 24.546875 L 5.714844 24.546875 L 11.425781 20.472656 L 11.425781 24.546875 L 12.796875 24.546875 L 12.796875 17.566406 Z M 27.183594 9.191406 C 27.183594 8.429688 26.882812 7.742188 26.394531 7.238281 L 19.742188 11.984375 L 18.277344 11.984375 L 18.277344 11.324219 L 25.070312 6.480469 C 24.867188 6.433594 24.660156 6.402344 24.441406 6.402344 L 23.988281 6.402344 L 18.277344 10.472656 L 18.277344 6.402344 L 16.90625 6.402344 L 16.90625 13.378906 L 27.183594 13.378906 L 27.183594 11.984375 L 23.324219 11.984375 L 27.183594 9.234375 Z M 11.425781 6.402344 L 11.425781 10.472656 L 5.714844 6.402344 L 5.261719 6.402344 C 4.496094 6.402344 3.804688 6.722656 3.304688 7.238281 L 9.960938 11.984375 L 7.570312 11.984375 L 2.628906 8.460938 C 2.566406 8.695312 2.519531 8.9375 2.519531 9.191406 L 2.519531 9.234375 L 6.375 11.984375 L 2.519531 11.984375 L 2.519531 13.378906 L 12.796875 13.378906 L 12.796875 6.402344 Z M 11.425781 6.402344 "
+                                        fill-opacity="1" fill-rule="nonzero" />
+                                    <path fill="rgb(81.17981%, 10.5896%, 16.859436%)"
+                                        d="M 16.90625 13.378906 L 16.90625 6.402344 L 12.796875 6.402344 L 12.796875 13.378906 L 2.519531 13.378906 L 2.519531 17.566406 L 12.796875 17.566406 L 12.796875 24.546875 L 16.90625 24.546875 L 16.90625 17.566406 L 27.183594 17.566406 L 27.183594 13.378906 Z M 16.90625 13.378906 "
+                                        fill-opacity="1" fill-rule="nonzero" />
+                                </g>
+                            </svg>English</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="25" zoomAndPan="magnify"
+                                        viewBox="0 0 30 30.000001" height="25" preserveAspectRatio="xMidYMid meet"
+                                        version="1.0">
+                                        <defs>
+                                            <clipPath id="id1">
+                                                <path
+                                                    d="M 19 5.261719 L 27.582031 5.261719 L 27.582031 23.40625 L 19 23.40625 Z M 19 5.261719 "
+                                                    clip-rule="nonzero" />
+                                            </clipPath>
+                                            <clipPath id="id2">
+                                                <path
+                                                    d="M 2.179688 5.261719 L 11 5.261719 L 11 23.40625 L 2.179688 23.40625 Z M 2.179688 5.261719 "
+                                                    clip-rule="nonzero" />
+                                            </clipPath>
+                                            <clipPath id="id3">
+                                                <path
+                                                    d="M 10 5.261719 L 20 5.261719 L 20 23.40625 L 10 23.40625 Z M 10 5.261719 "
+                                                    clip-rule="nonzero" />
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#id1)">
+                                            <path fill="rgb(92.939758%, 16.079712%, 22.349548%)"
+                                                d="M 27.574219 20.617188 C 27.574219 22.15625 26.3125 23.40625 24.753906 23.40625 L 19.113281 23.40625 L 19.113281 5.261719 L 24.753906 5.261719 C 26.3125 5.261719 27.574219 6.511719 27.574219 8.054688 Z M 27.574219 20.617188 "
+                                                fill-opacity="1" fill-rule="nonzero" />
+                                        </g>
+                                        <g clip-path="url(#id2)">
+                                            <path fill="rgb(0%, 14.118958%, 58.428955%)"
+                                                d="M 5.011719 5.261719 C 3.453125 5.261719 2.191406 6.511719 2.191406 8.054688 L 2.191406 20.617188 C 2.191406 22.15625 3.453125 23.40625 5.011719 23.40625 L 10.652344 23.40625 L 10.652344 5.261719 Z M 5.011719 5.261719 "
+                                                fill-opacity="1" fill-rule="nonzero" />
+                                        </g>
+                                        <g clip-path="url(#id3)">
+                                            <path fill="rgb(93.328857%, 93.328857%, 93.328857%)"
+                                                d="M 10.652344 5.261719 L 19.113281 5.261719 L 19.113281 23.40625 L 10.652344 23.40625 Z M 10.652344 5.261719 "
+                                                fill-opacity="1" fill-rule="nonzero" />
+                                        </g>
+                                    </svg>French</a></li>
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="25" zoomAndPan="magnify"
+                                        viewBox="0 0 30 30.000001" height="25" preserveAspectRatio="xMidYMid meet"
+                                        version="1.0">
+                                        <defs>
+                                            <clipPath id="id1">
+                                                <path
+                                                    d="M 3.386719 6.132812 L 26.613281 6.132812 L 26.613281 22.828125 L 3.386719 22.828125 Z M 3.386719 6.132812 "
+                                                    clip-rule="nonzero" />
+                                            </clipPath>
+                                            <clipPath id="id2">
+                                                <path
+                                                    d="M 3.386719 6.132812 L 26.613281 6.132812 L 26.613281 15 L 3.386719 15 Z M 3.386719 6.132812 "
+                                                    clip-rule="nonzero" />
+                                            </clipPath>
+                                            <clipPath id="id3">
+                                                <path
+                                                    d="M 3.386719 6.132812 L 16 6.132812 L 16 22.828125 L 3.386719 22.828125 Z M 3.386719 6.132812 "
+                                                    clip-rule="nonzero" />
+                                            </clipPath>
+                                            <clipPath id="id4">
+                                                <path d="M 3.386719 8 L 15 8 L 15 22 L 3.386719 22 Z M 3.386719 8 "
+                                                    clip-rule="nonzero" />
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#id1)">
+                                            <path fill="rgb(80.778503%, 6.669617%, 14.898682%)"
+                                                d="M 26.605469 20.257812 C 26.605469 21.675781 25.449219 22.828125 24.027344 22.828125 L 5.972656 22.828125 C 4.550781 22.828125 3.394531 21.675781 3.394531 20.257812 L 3.394531 8.703125 C 3.394531 7.285156 4.550781 6.132812 5.972656 6.132812 L 24.027344 6.132812 C 25.449219 6.132812 26.605469 7.285156 26.605469 8.703125 Z M 26.605469 20.257812 "
+                                                fill-opacity="1" fill-rule="nonzero" />
+                                        </g>
+                                        <g clip-path="url(#id2)">
+                                            <path fill="rgb(0%, 21.958923%, 65.879822%)"
+                                                d="M 24.027344 6.132812 L 5.972656 6.132812 C 4.550781 6.132812 3.394531 7.285156 3.394531 8.703125 L 3.394531 14.480469 L 26.605469 14.480469 L 26.605469 8.703125 C 26.605469 7.285156 25.449219 6.132812 24.027344 6.132812 Z M 24.027344 6.132812 "
+                                                fill-opacity="1" fill-rule="nonzero" />
+                                        </g>
+                                        <g clip-path="url(#id3)">
+                                            <path fill="rgb(93.328857%, 93.328857%, 93.328857%)"
+                                                d="M 4.242188 22.148438 L 15.664062 14.523438 L 4.253906 6.800781 C 3.730469 7.273438 3.394531 7.945312 3.394531 8.703125 L 3.394531 20.257812 C 3.394531 21.011719 3.726562 21.679688 4.242188 22.148438 Z M 4.242188 22.148438 "
+                                                fill-opacity="1" fill-rule="nonzero" />
+                                        </g>
+                                        <g clip-path="url(#id4)">
+                                            <path fill="rgb(98.81897%, 81.959534%, 8.628845%)"
+                                                d="M 13.753906 13.53125 L 13.785156 14.269531 L 14.503906 14.460938 L 13.804688 14.714844 L 13.847656 15.453125 L 13.386719 14.871094 L 12.695312 15.136719 L 13.109375 14.523438 L 12.636719 13.949219 L 13.351562 14.152344 Z M 4.429688 8.046875 L 4.988281 8.539062 L 5.621094 8.148438 L 5.324219 8.828125 L 5.890625 9.308594 L 5.152344 9.238281 L 4.871094 9.921875 L 4.707031 9.199219 L 3.964844 9.144531 L 4.605469 8.769531 Z M 4.707031 19.101562 L 5.078125 19.742188 L 5.800781 19.578125 L 5.304688 20.125 L 5.6875 20.761719 L 5.007812 20.457031 L 4.519531 21.015625 L 4.597656 20.28125 L 3.914062 19.992188 L 4.640625 19.835938 Z M 9.84375 14.480469 C 9.84375 15.542969 8.976562 16.40625 7.910156 16.40625 C 6.839844 16.40625 5.972656 15.542969 5.972656 14.480469 C 5.972656 13.417969 6.839844 12.554688 7.910156 12.554688 C 8.976562 12.554688 9.84375 13.417969 9.84375 14.480469 Z M 9.84375 14.480469 "
+                                                fill-opacity="1" fill-rule="nonzero" />
+                                        </g>
+                                        <path fill="rgb(98.81897%, 81.959534%, 8.628845%)"
+                                            d="M 8.292969 11.011719 L 8.191406 12.710938 L 8.035156 12.6875 L 8.089844 10.714844 L 7.910156 10.597656 L 7.730469 10.714844 L 7.785156 12.6875 L 7.625 12.710938 L 7.523438 11.011719 L 7.296875 11.152344 L 7.507812 12.882812 L 8.308594 12.882812 L 8.519531 11.152344 Z M 7.523438 17.949219 L 7.625 16.25 L 7.785156 16.273438 L 7.726562 18.246094 L 7.910156 18.363281 L 8.089844 18.246094 L 8.035156 16.273438 L 8.191406 16.25 L 8.292969 17.949219 L 8.519531 17.808594 L 8.308594 16.078125 L 7.507812 16.078125 L 7.296875 17.808594 Z M 5.175781 16.664062 L 6.453125 15.535156 L 6.546875 15.660156 L 5.109375 17.015625 L 5.152344 17.226562 L 5.363281 17.269531 L 6.726562 15.835938 L 6.851562 15.929688 L 5.714844 17.203125 L 5.976562 17.265625 L 7.058594 15.890625 L 6.773438 15.609375 L 6.492188 15.328125 L 5.113281 16.402344 Z M 10.644531 12.296875 L 9.363281 13.429688 L 9.269531 13.300781 L 10.710938 11.945312 L 10.664062 11.734375 L 10.453125 11.691406 L 9.09375 13.125 L 8.964844 13.03125 L 10.101562 11.757812 L 9.839844 11.695312 L 8.761719 13.070312 L 9.324219 13.632812 L 10.703125 12.558594 Z M 4.425781 14.097656 L 6.132812 14.199219 L 6.109375 14.355469 L 4.128906 14.300781 L 4.011719 14.480469 L 4.128906 14.660156 L 6.109375 14.605469 L 6.132812 14.761719 L 4.425781 14.863281 L 4.566406 15.089844 L 6.304688 14.878906 L 6.304688 14.082031 L 4.566406 13.871094 Z M 11.390625 14.863281 L 9.683594 14.761719 L 9.707031 14.605469 L 11.691406 14.660156 L 11.808594 14.480469 L 11.691406 14.300781 L 9.707031 14.355469 L 9.683594 14.199219 L 11.390625 14.097656 L 11.25 13.871094 L 9.511719 14.082031 L 9.511719 14.878906 L 11.25 15.089844 Z M 5.714844 11.757812 L 6.851562 13.03125 L 6.726562 13.125 L 5.363281 11.691406 L 5.152344 11.734375 L 5.109375 11.945312 L 6.546875 13.300781 L 6.453125 13.429688 L 5.175781 12.296875 L 5.113281 12.558594 L 6.492188 13.632812 L 6.773438 13.351562 L 7.058594 13.070312 L 5.976562 11.695312 Z M 10.101562 17.203125 L 8.964844 15.929688 L 9.09375 15.835938 L 10.453125 17.269531 L 10.664062 17.226562 L 10.710938 17.015625 L 9.269531 15.660156 L 9.363281 15.535156 L 10.644531 16.664062 L 10.703125 16.402344 L 9.324219 15.328125 L 8.761719 15.890625 L 9.839844 17.265625 Z M 10.101562 17.203125 "
+                                            fill-opacity="1" fill-rule="nonzero" />
+                                    </svg> Filipino</a></li>
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="25" zoomAndPan="magnify"
+                                        viewBox="0 0 30 30.000001" height="25" preserveAspectRatio="xMidYMid meet"
+                                        version="1.0">
+                                        <defs>
+                                            <clipPath id="id1">
+                                                <path
+                                                    d="M 2.226562 6.132812 L 27.628906 6.132812 L 27.628906 24.277344 L 2.226562 24.277344 Z M 2.226562 6.132812 "
+                                                    clip-rule="nonzero" />
+                                            </clipPath>
+                                        </defs>
+                                        <g clip-path="url(#id1)">
+                                            <path fill="rgb(93.328857%, 93.328857%, 93.328857%)"
+                                                d="M 27.621094 21.488281 C 27.621094 23.027344 26.359375 24.277344 24.800781 24.277344 L 5.054688 24.277344 C 3.496094 24.277344 2.234375 23.027344 2.234375 21.488281 L 2.234375 8.925781 C 2.234375 7.382812 3.496094 6.132812 5.054688 6.132812 L 24.800781 6.132812 C 26.359375 6.132812 27.621094 7.382812 27.621094 8.925781 Z M 27.621094 21.488281 "
+                                                fill-opacity="1" fill-rule="nonzero" />
+                                        </g>
+                                        <path fill="rgb(92.939758%, 10.5896%, 18.429565%)"
+                                            d="M 19.863281 15.207031 C 19.863281 15.527344 19.832031 15.84375 19.769531 16.160156 C 19.707031 16.472656 19.613281 16.78125 19.488281 17.074219 C 19.363281 17.371094 19.210938 17.652344 19.03125 17.921875 C 18.851562 18.1875 18.648438 18.433594 18.417969 18.660156 C 18.1875 18.886719 17.941406 19.089844 17.671875 19.269531 C 17.402344 19.445312 17.117188 19.597656 16.816406 19.71875 C 16.515625 19.84375 16.207031 19.933594 15.890625 19.996094 C 15.574219 20.058594 15.25 20.089844 14.925781 20.089844 C 14.601562 20.089844 14.28125 20.058594 13.964844 19.996094 C 13.644531 19.933594 13.335938 19.84375 13.039062 19.71875 C 12.738281 19.597656 12.453125 19.445312 12.183594 19.269531 C 11.914062 19.089844 11.664062 18.886719 11.4375 18.660156 C 11.207031 18.433594 11.003906 18.1875 10.824219 17.921875 C 10.644531 17.652344 10.492188 17.371094 10.367188 17.074219 C 10.242188 16.78125 10.148438 16.472656 10.085938 16.160156 C 10.023438 15.84375 9.992188 15.527344 9.992188 15.207031 C 9.992188 14.886719 10.023438 14.566406 10.085938 14.253906 C 10.148438 13.9375 10.242188 13.632812 10.367188 13.335938 C 10.492188 13.039062 10.644531 12.757812 10.824219 12.492188 C 11.003906 12.226562 11.207031 11.980469 11.4375 11.75 C 11.664062 11.523438 11.914062 11.324219 12.183594 11.144531 C 12.453125 10.964844 12.738281 10.816406 13.039062 10.691406 C 13.335938 10.570312 13.644531 10.476562 13.964844 10.414062 C 14.28125 10.351562 14.601562 10.320312 14.925781 10.320312 C 15.25 10.320312 15.574219 10.351562 15.890625 10.414062 C 16.207031 10.476562 16.515625 10.570312 16.816406 10.691406 C 17.117188 10.816406 17.402344 10.964844 17.671875 11.144531 C 17.941406 11.324219 18.1875 11.523438 18.417969 11.75 C 18.648438 11.980469 18.851562 12.226562 19.03125 12.492188 C 19.210938 12.757812 19.363281 13.039062 19.488281 13.335938 C 19.613281 13.632812 19.707031 13.9375 19.769531 14.253906 C 19.832031 14.566406 19.863281 14.886719 19.863281 15.207031 Z M 19.863281 15.207031 "
+                                            fill-opacity="1" fill-rule="nonzero" />
+                                    </svg>Japanese</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-danger me-2"><a class="nav-link" href="index.html">
+                            Signout</a></button>
+                    <button class="btn btn-danger col-3" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                        </svg><a class="nav-link" href="userprofile.html">Profile</a> </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Body -->
+    <section class="py-6 bg-light-primary" id="fitness">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-4">
+                <div class="col-xl-6 col-lg-8 col-sm-10">
+                    <h2 class="font-weight-bold"><span class="text-danger"> FITNESS</span></h2>
+                    <h5 class="text-muted mb-0">We bring the results while helping you achieve your goals without
+                        checking it up regularly.</h5>
+                </div>
+            </div>
+
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 text-center justify-content-center px-xl-6 aos-init aos-animate"
+                data-aos="fade-up">
+                <div class="col my-3">
+                    <a class="nav-link" href="">
+                        <div class="card border-hover-primary hover-scale">
+                            <div class="card-body">
+                                <div class="text-primary mb-3">
+                                    <svg width="80" height="80" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M30.5 13C32.9853 13 35 10.9853 35 8.5C35 6.01472 32.9853 4 30.5 4C28.0147 4 26 6.01472 26 8.5C26 10.9853 28.0147 13 30.5 13Z"
+                                            fill="#333333" />
+                                        <path
+                                            d="M21.4601 17.2823C20.2126 17.5915 19.3619 18.0579 18.6751 18.6362C17.6443 19.5043 16.8134 20.7569 15.6892 22.7241C15.1412 23.6831 13.9195 24.0163 12.9605 23.4683C12.0014 22.9202 11.6683 21.6985 12.2163 20.7395C13.3348 18.7822 14.4662 16.9512 16.0985 15.5766C17.8028 14.1414 19.8882 13.3288 22.7024 13.016C23.8781 12.8854 25.1713 12.9117 26.3846 13.4532C27.6583 14.0218 28.5876 15.0406 29.2217 16.4023C30.0755 18.2358 30.7107 19.3274 31.2195 19.9595C31.4641 20.2633 31.6352 20.4042 31.7318 20.4673C31.8089 20.5176 31.8413 20.5214 31.8538 20.5228L31.8552 20.523C31.9423 20.5336 32.2236 20.5226 33.0524 20.1563C33.413 19.9969 33.8074 19.8042 34.289 19.5689L34.4042 19.5126C34.9254 19.2581 35.522 18.9686 36.1882 18.6724C37.1975 18.2238 38.3795 18.6784 38.8281 19.6878C39.2767 20.6971 38.8222 21.879 37.8128 22.3277C37.2175 22.5922 36.6766 22.8544 36.1596 23.1069L36.0289 23.1708C35.5679 23.3961 35.1041 23.6228 34.6695 23.8149C33.7688 24.213 32.6181 24.6454 31.3717 24.4937C30.0562 24.3335 29.0417 23.5914 28.2073 22.5941L25.4735 27.8666L29.2532 32.7853C29.4787 33.0786 29.6183 33.4288 29.6566 33.7968L30.4893 41.793C30.6037 42.8916 29.8058 43.875 28.7072 43.9893C27.6085 44.1038 26.6252 43.3059 26.5108 42.2072L25.7368 34.7739L23.441 31.7864L23.4218 31.8235L23.3373 31.6515L19.0949 26.1307C18.6709 25.579 18.5641 24.8467 18.8129 24.197L21.4601 17.2823Z"
+                                            fill="#333333" />
+                                        <path
+                                            d="M18.4321 29.0071L16.9603 32.9676L11.1591 32.5063C10.058 32.4187 9.09445 33.2404 9.00689 34.3414C8.91932 35.4425 9.74095 36.4061 10.842 36.4937L18.15 37.0748C19.0415 37.1457 19.8717 36.6161 20.1833 35.7778L21.3084 32.7501L18.4321 29.0071Z"
+                                            fill="#333333" />
+                                    </svg>
+                                </div>
+                                <h3 class="font-weight-bold mb-3"><span class="text-primary"> Steps</span></h3>
+                                <h3>3,261</h3>
+                                <br>
+                                <h5>65% <br> <span class="text-primary"> Completed</span></h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col my-3">
+                    <a class="nav-link" href="">
+                        <div class="card border-hover-primary hover-scale">
+                            <div class="card-body">
+                                <div class="text-primary mb-3">
+                                    <?xml version="1.0" encoding="UTF-8"?>
+                                    <svg width="80" height="80" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M39.3 6H8.7C7.20883 6 6 7.20883 6 8.7V39.3C6 40.7912 7.20883 42 8.7 42H39.3C40.7912 42 42 40.7912 42 39.3V8.7C42 7.20883 40.7912 6 39.3 6Z"
+                                            fill="none" stroke="#333" stroke-width="1" stroke-linejoin="round" />
+                                        <path d="M36 27L29 30" stroke="#333" stroke-width="1" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M21 33L14 36" stroke="#333" stroke-width="1" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M16 29C18 26.1046 19 24.1046 19 23C19 21.3431 17.6569 20 16 20C14.3431 20 13 21.3431 13 23C13 24.1046 14 26.1046 16 29Z"
+                                            fill="none" stroke="#333" stroke-width="1" stroke-linejoin="round" />
+                                        <path
+                                            d="M32 22C34 19.1046 35 17.1046 35 16C35 14.3431 33.6569 13 32 13C30.3431 13 29 14.3431 29 16C29 17.1046 30 19.1046 32 22Z"
+                                            fill="none" stroke="#333" stroke-width="1" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="font-weight-bold mb-3"><span class="text-danger"> Distance</span></h3>
+                                <h3>7.6 mile</h3>
+                                <br>
+                                <h5>10 <br> <span class="text-danger"> Miles Today's Target </span></h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col my-3">
+                    <a class="nav-link" href="">
+                        <div class="card border-hover-primary hover-scale">
+                            <div class="card-body">
+                                <div class="text-primary mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
+                                        class="bi bi-lightning-charge text-warning" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z" />
+                                    </svg>
+                                </div>
+                                <h3 class="font-weight-bold mb-3"><span class="text-warning">Calories</span></h3>
+                                <h3>4,025 kcal</h3>
+                                <br>
+                                <h5>5000 <br> <span class="text-warning"> kcla Today's Target </span></h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col my-3">
+                    <a class="nav-link" href="">
+                        <div class="card border-hover-primary hover-scale">
+                            <div class="card-body">
+                                <div class="text-primary mb-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
+                                        class="bi bi-heart-fill text-success" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                                    </svg>
+
+                                </div>
+                                <h3 class="font-weight-bold mb-3"><span class="text-success">Heart Rate</span></h3>
+                                <h3>102 BPM</h3>
+                                <br>
+                                <h5>125 <br> <span class="text-success"> BPM Highest </span></h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Graph -->
+    <hr>
+    <div class="wrap" id="progress">
+        <h2 class="text-danger">Progress</h2>
+        <h6>Keep doing your best!</h6>
+        <hr>
+        <h4 class="text-primary">Steps</h4>
+        <div class="progress">
+            <div class="progress-bar" style="width:65%;">65%</div>
+        </div>
+        <br>
+        <h4 class="text-danger">Distance</h4>
+        <div class="progress">
+            <div class="progress-bar bg-danger" style="width:75%;">75%</div>
+        </div>
+        <br>
+        <h4 class="text-warning">Calories</h4>
+        <div class="progress">
+            <div class="progress-bar bg-warning" style="width:86%;">86%</div>
+        </div>
+        <br>
+        <h4 class="text-success">Heart Rate</h4>
+        <div class="progress">
+            <div class="progress-bar bg-success" style="width:57%;">57%</div>
+        </div>
+
+    </div>
+    <!-- features -->
+
+    <section class="bg-light" id="features">
+        <hr>
+        <div class="container px-4 py-5" id="custom-cards">
+            <h2 class="pb-2 border-bottom text-danger">Features</h2>
+
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col">
+                    <a class="nav-link" href="">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('https://img.freepik.com/premium-photo/fitness-bodybuilding-background_136595-22918.jpg?w=2000');">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Workout <br> Plans</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="col">
+                    <a class="nav-link" href="">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                        style="background-image: url('https://i.pinimg.com/originals/e8/d8/ee/e8d8ee9edece42916aa5851d7fd7bebd.jpg');">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Diet <br> Plans</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                </div>
+
+                <div class="col">
+                    <a class="nav-link" href="">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg bg-image hover-zoom"
+                        style="background-image: url('https://t3.ftcdn.net/jpg/02/15/99/44/360_F_215994403_3Okw9dk1Vc1DU7DCOXFPMbaz2QPg0tJu.jpg');"
+                        class="w-100">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Calorie Calculator</h3>
+                            <ul class="d-flex list-unstyled mt-auto">
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing -->
+    <hr>
+    <section class="bg-light" id="pricing">
+        
+        <div class="container px-4 py-5" id="custom-cards">
+            <h2 class="pb-2 border-bottom text-danger">Pricing</h2>
+
+            <div class="pricetable text-center">
+                <div class="row row-cols-1 align-items-stretch g-4 py-5">
+                    <div class="col">
+                        <div class="card ">
+
+                            <div class="card-header" style="background-color: #cf7570; color: white;">
+                                <h4>The Starter Plan</h4>
+                                <h1 class="my-0 font-weight-normal">$25<small class="text-muted">/mo</small></h1>
+                                <h5>24% SAVINGS</h5>
+                            </div>
+                            <div class="card-body" style="background-color: grey; color: white;">
+                                <ul class="list-unstyled mt-e mb-4 fw-bold">
+                                    <li>Up to 5 active clients</li>
+                                    <li>HealthGenics Payments</li>
+                                    <li>Coach Profiles</li>
+                                </ul>
+                                <button type="button" class="btn btn-danger btn-lg px-4 gap-3">Try Starter Free</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card shadow-lg">
+
+                            <div class="card-header" style="background-color: #cf7570; color: white;">
+                                <h4>The Standard Plan</h4>
+                                <h1 class="my-0 font-weight-normal">$59<small class="text-muted">/mo</small></h1>
+                                <h5>17% SAVINGS</h5>
+                            </div>
+
+                            <div class="card-body" style="background-color: grey; color: white;">
+                                <ul class="list-unstyled mt-e mb-4 fw-bold">
+                                    <li>Up to 20 active clients</li>
+                                    <li>HealthGenics Payments</li>
+                                    <li>Coach Profiles</li>
+                                </ul>
+                                <button type="button" class="btn btn-danger btn-lg px-4 gap-3">Try Standard
+                                    Free</button>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="col">
+                            <div class="card shadow-sm">
+
+                                <div class="card-header" style="background-color: #cf7570; color: white;">
+                                    <h4>The Pro Plan</h4>
+                                    <h1 class="my-0 font-weight-normal">$119<small class="text-muted">/mo</small></h1>
+                                    <h5>17% SAVINGS</h5>
+                                </div>
+
+                                <div class="card-body" style="background-color: grey; color: white;">
+                                    <ul class="list-unstyled mt-e mb-4 fw-bold">
+                                        <li>Up to 50 active clients</li>
+                                        <li>HealthGenics Payments</li>
+                                        <li>Coach Profiles</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-danger btn-lg px-4 gap-3">Try Pro Free</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+</body>
+<section class="bg-dark text-light" id="contacts">
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Home</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Signin</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Signin</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>About</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Members</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Plans</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Contacts</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Facebook</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Google</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Twitter</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Instagram</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-danger" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-center py-1 my-1 border-top">
+          <p>&copy; 2023 Health<span class="text-danger">Genics</span> , Inc. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+</html>

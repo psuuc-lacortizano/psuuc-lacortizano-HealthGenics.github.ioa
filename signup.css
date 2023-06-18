@@ -1,0 +1,14 @@
+body{
+    background-image: url(img/pexels-victor-freitas-685530-e1641344535194.jpg);
+    background-size: cover;
+}
+#google:hover{
+    color:red;
+}
+#facebook:hover{
+    color:blue;
+}
+#twitter:hover{
+    color:cyan;
+}
+
